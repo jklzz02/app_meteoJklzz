@@ -8,7 +8,8 @@ app = Flask(__name__)
 @app.route('/index')
 
 def index():
-    return "Hello world"
+    return render_template("index.html")
+
 @app.route('/weather')
 def get_weather():
     city = request.args.get('city')
